@@ -9,7 +9,7 @@ public class TestRunner {
 
 		long startTime = System.currentTimeMillis();
 
-		Result result = JUnitCore.runClasses(SuiteDeTestes.class);
+		Result result = JUnitCore.runClasses(SuiteDeTestes.class);		
 
 		for (Failure failure : result.getFailures()) {
 			System.out.println(failure.toString());

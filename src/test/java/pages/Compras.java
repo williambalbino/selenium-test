@@ -20,7 +20,7 @@ public class Compras {
 		signin.click();
 		
 		WebElement email = driver.findElement(By.id("email_create"));
-		email.sendKeys("testando4321@email.com");
+		email.sendKeys("assadff@6.com");
 		
 		WebElement create = driver.findElement(By.id("SubmitCreate"));
 		create.click();
@@ -78,6 +78,95 @@ public class Compras {
 		submit.click();
 		
 	}
+	
+	public void comprar(){
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); 
+		WebElement women = driver.findElement(By.xpath(".//*[@id='block_top_menu']/ul/li[1]/a"));
+		women.click();
+		
+		WebElement top = driver.findElement(By.xpath(".//*[@id='subcategories']/ul/li[1]/h5/a"));
+		top.click();
+		
+		WebElement details = driver.findElement(By.xpath(".//*[@id='center_column']/ul/li[1]/div/div[2]/div[2]/a[2]/span"));
+		details.click();
+		
+		WebElement qnt = driver.findElement(By.xpath(".//*[@id='quantity_wanted_p']/a[2]/span"));
+		qnt.click();
+		qnt.click();
+		
+		WebElement size = driver.findElement(By.id("group_1"));
+		size.click();
+		
+		WebElement sizeM = driver.findElement(By.xpath(".//*[@id='group_1']/option[2]"));
+		sizeM.click();
+		
+		WebElement color = driver.findElement(By.id("color_14"));
+		color.click();
+		
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		WebElement addToCart = driver.findElement(By.xpath(".//*[@id='add_to_cart']/button"));
+		addToCart.click();
+		
+		
+	}
+	
+	public void segundaCompra(){
+		
+		
+		WebElement dresses = driver.findElement(By.xpath(".//*[@id='block_top_menu']/ul/li[2]/a"));
+		dresses.click();
+		
+		WebElement casual = driver.findElement(By.xpath(".//*[@id='subcategories']/ul/li[1]/h5/a"));
+		casual.click();
+		
+		WebElement details = driver.findElement(By.xpath(".//*[@id='center_column']/ul/li/div/div[2]/div[2]/a[2]/span"));
+		details.click();
+		
+		WebElement cart = driver.findElement(By.xpath(".//*[@id='add_to_cart']/button"));
+		cart.click();
+		
+		
+	}
+	
+	public void terceiraCompra(){
+		
+		WebElement tShirt = driver.findElement(By.xpath(".//*[@id='block_top_menu']/ul/li[3]/a"));
+		tShirt.click();
+		
+		WebElement cart = driver.findElement(By.xpath(".//*[@id='center_column']/ul/li/div/div[2]/div[2]/a[1]/span"));
+		cart.click();
+	}
+	
+	public void editarUsuario(){
+		
+		WebElement usuario = driver.findElement(By.className("account"));
+		usuario.click();
+		
+		WebElement info = driver.findElement(By.xpath(".//*[@id='center_column']/div/div[1]/ul/li[4]/a/span"));
+		info.click();
+		
+		WebElement firstName = driver.findElement(By.id("firstname"));
+		firstName.clear();
+		firstName.sendKeys("Phulano");
+		
+		WebElement lastName = driver.findElement(By.id("lastname"));
+		lastName.clear();
+		lastName.sendKeys("Dethal");
+		
+		WebElement oldPassword = driver.findElement(By.id("old_passwd"));
+		oldPassword.sendKeys("123456");
+		
+		WebElement submit = driver.findElement(By.xpath(".//*[@id='center_column']/div/form/fieldset/div[11]/button"));
+		submit.click();
+		
+	}
+
+	
+	public String erroLastName(){
+		return driver.findElement(By.xpath(".//*[@id='center_column']/div/p")).getText();
+	}
+	
+	
 	
 	
 }

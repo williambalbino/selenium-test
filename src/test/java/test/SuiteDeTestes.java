@@ -6,9 +6,10 @@ import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
 @SuiteClasses({ 
-	CadastroTestNegativo.class, 
+	ComprasTest.class,
 	CadastroTestPositivo.class,
-	ComprasTest.class})
+	CadastroTestNegativo.class
+	})
 public class SuiteDeTestes {
 
 }

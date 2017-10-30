@@ -4,12 +4,14 @@ import static org.junit.Assert.*;
 
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
+import org.junit.FixMethodOrder;
 import org.junit.Test;
+import org.junit.runners.MethodSorters;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import pages.Cadastro;
-
+//@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class CadastroTestNegativo {
 
 	static WebDriver driver;
@@ -28,7 +30,7 @@ public class CadastroTestNegativo {
 		driver.close();
 	}
 
-	@Test
+	@Test //2
 	public void sobrenomeInvalido() {
 		cadastro.sobrenomeInvalido();
 		assertEquals("Você não pode deixar este campo em branco.", cadastro.erroSobrenome());
@@ -41,7 +43,7 @@ public class CadastroTestNegativo {
 	// branco.");
 	// }
 
-	@Test
+	@Test //4
 	public void emailESenhaInvalido() {
 		cadastro.emailVaziol();
 		assertEquals(cadastro.erroEmail(), "Você não pode deixar este campo em branco.");
@@ -50,18 +52,18 @@ public class CadastroTestNegativo {
 	}
 	
 
-	@Test
+	@Test //2
 	public void testSexo() {
 		cadastro.preencherSexo();
 	}
 
-	@Test
+	@Test //2
 	public void recoveryTest() {
 		cadastro.preencherTelefone();
 		cadastro.preencherRecoveryEmail();
 	}
 
-	@Test
+	@Test //1 
 	public void clickTest() {
 		cadastro.clicarSubmit();
 	}

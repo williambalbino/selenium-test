@@ -10,6 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import pages.Cadastro;
 
+//@FixMethodOrder(MethodSorters.JVM)
 public class CadastroTestPositivo {
 
 	// instanciando a classe webdriver
@@ -29,36 +30,36 @@ public class CadastroTestPositivo {
 		driver.close();
 	}
 
-	@Test
-	public void test1() {
+	@Test //2
+	public void test4() {
 		cadastro.preencherNomeSobrenome();
 		// assertEquals(cadastro.erroSobrenome(), "Você não pode deixar este campo
 		// em branco.");
 	}
 
-	@Test
+	@Test //3
 	public void test2() {
 		cadastro.preencherEmail();
 		cadastro.preencherSenha();
 	}
 
-	@Test
-	public void test3() {
+	@Test  //4
+	public void test1() {
 		cadastro.preencherAniversario();
 	}
 
-	@Test
-	public void test4() {
+	@Test //2
+	public void test3() {
 		cadastro.preencherSexo();
 	}
 
-	@Test
+	@Test //2
 	public void test5() {
 		cadastro.preencherTelefone();
 		cadastro.preencherRecoveryEmail();
 	}
 
-	@Test
+	@Test //1
 	public void test6() {
 		cadastro.clicarSubmit();
 

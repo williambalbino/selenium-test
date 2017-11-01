@@ -6,8 +6,6 @@ import java.util.List;
 
 public class GRASP {
 
-
-	
 	public static void main(String[] args) {
 
 		// int[] cadastroPositivo = {2, 3, 4, 2, 2, 1};
@@ -16,11 +14,10 @@ public class GRASP {
 		List<Integer> cPositivos = new ArrayList();
 		List<Integer> cNegativos = new ArrayList();
 		List<Integer> compras = new ArrayList();
-		
+
 		List<List<Integer>> solucao1 = new ArrayList<List<Integer>>();
 		List<List<Integer>> solucao2 = new ArrayList<List<Integer>>();
 		List<List<Integer>> solucao3 = new ArrayList<List<Integer>>();
-		
 
 		cPositivos.add(2);
 		cPositivos.add(3);
@@ -39,56 +36,61 @@ public class GRASP {
 		compras.add(4);
 		compras.add(2);
 		compras.add(6);
-		
-		for(int n: cPositivos){
+
+		for (int n : cPositivos) {
 			Collections.shuffle(cPositivos);
-			cPositivos = new ArrayList<Integer>(cPositivos);
-			solucao1.add(cPositivos);
+			solucao1.add(new ArrayList<Integer>(cPositivos));
+			Collections.shuffle(cPositivos);
+			solucao2.add(cPositivos);
 		}
-		
-		for(int n: cNegativos){
-			Collections.shuffle(cNegativos);
-			cNegativos = new ArrayList<Integer>(cNegativos);
-			solucao2.add(cNegativos);
-		}
-		
-		for(int n: compras){
-			Collections.shuffle(compras);
-			compras = new ArrayList<Integer>(compras);
-			solucao3.add(compras);
-		}
-		
+
+		// for (int n : cNegativos) {
+		// Collections.shuffle(cNegativos);
+		// cNegativos = new ArrayList<Integer>(cNegativos);
+		// solucao2.add(cNegativos);
+		// }
+		//
+		// for (int n : compras) {
+		// Collections.shuffle(compras);
+		// compras = new ArrayList<Integer>(compras);
+		// solucao3.add(compras);
+		// }
+
 		System.out.println(solucao1);
-		System.out.println(solucao2);
-		System.out.println(solucao3);
-		
-		
-		
+		// System.out.println(solucao2);
+		// System.out.println(solucao3);
 
-		
-		
-
-		
-		
-		
-		
-
+		for (int i = 0; i < solucao1.size(); i++) {
+			for (int j = 0; j < solucao1.size(); j++) {
+				for (int k = 0; k < cPositivos.size(); k++) {
+					
+					int a = solucao1.get(i).get(k);
+					int b = solucao1.get(j).get(k);
+					
+					if (a == b) {
+						System.out.println(a + " igual a " + b);
+					} else if (a > b) {
+						System.out.println(a + " maior que " + b);
+					} else {
+						System.out.println(b + " maior que " + a);
+					}
+				}
+			}
+		}
 	}
 
-	public static void ordena(ArrayList a) {
+	public static void ordena(List a) {
 		System.out.println("antes: " + a.toString());
-		ArrayList<Integer> b = null;
-		
+		List<Integer> b = null;
+
 		for (int i = 0; i < a.size(); i++) {
 			Collections.shuffle(a);
 			b = a;
-			
+
 			System.out.println("depois: " + b.toString());
 		}
 		ArrayList<Integer> solucao = null;
 		solucao.addAll(b);
 	}
-	
-	
 
 }

@@ -47,17 +47,17 @@ public class ComprasTest {
 	}
 	
 	@Test //4
-	public void test4(){ //compra2
+	public void test5(){ //compra2
 		compras.segundaCompra();
 	}
 	
 	@Test //2
-	public void test5(){ //compra3
+	public void test3(){ //compra3
 		compras.terceiraCompra();
 	}
 	
 	@Test //6
-	public void test3(){ //editar
+	public void test4(){ //editar
 		compras.editarUsuario();
 	}
 	

@@ -13,7 +13,7 @@ public class HillClimbing {
 	public static void main(String[] args) {
 		
 		int[] cadastroPositivo = {2, 3, 4, 2, 2, 1};
-		int[] cadastroNegativo = {4, 2, 2, 1};
+		int[] cadastroNegativo = {2, 4, 2, 2, 1};
 		int[] compras = {16, 7, 4, 2, 6 };
 		
 		ordenar(cadastroPositivo);

@@ -31,41 +31,36 @@ public class CadastroTestNegativo {
 	}
 
 	@Test //2
-	public void sobrenomeInvalido() {
+	public void test1() {
 		cadastro.sobrenomeInvalido();
-		assertEquals("Você não pode deixar este campo em branco.", cadastro.erroSobrenome());
+		
 	}
 
-	// @Test
-	// public void nomeInvalido(){
-	// cadastro.nomeInvalido();
-	// assertEquals(cadastro.erroNome(), "Você não pode deixar este campo em
-	// branco.");
-	// }
-
 	@Test //4
-	public void emailESenhaInvalido() {
+	public void test3() {
 		cadastro.emailVaziol();
-		assertEquals(cadastro.erroEmail(), "Você não pode deixar este campo em branco.");
+		
 		cadastro.senhaDiferente();
-		assertEquals("Você não pode deixar este campo em branco.", cadastro.erroSenha());
+		
 	}
 	
 
 	@Test //2
-	public void testSexo() {
+	public void test2() {
 		cadastro.preencherSexo();
 	}
 
 	@Test //2
-	public void recoveryTest() {
+	public void test5() {
 		cadastro.preencherTelefone();
 		cadastro.preencherRecoveryEmail();
 	}
 
 	@Test //1 
-	public void clickTest() {
+	public void test4() {
 		cadastro.clicarSubmit();
+//		assertEquals("Você não pode deixar este campo em branco.", cadastro.erroSobrenome());
+//		assertEquals("Você não pode deixar este campo em branco.", cadastro.erroEmail());
 	}
 
 }

@@ -1,3 +1,4 @@
+
 package pages;
 
 import org.openqa.selenium.By;
@@ -33,7 +34,7 @@ public class Cadastro {
 
 	public void preencherEmail() {
 		WebElement email = driver.findElement(By.id("GmailAddress"));
-		email.sendKeys("will123will");
+		email.sendKeys("will1234will");
 	}
 
 	public void emailVaziol() {

@@ -20,7 +20,7 @@ public class Compras {
 		signin.click();
 		
 		WebElement email = driver.findElement(By.id("email_create"));
-		email.sendKeys("assadff@6.com");
+		email.sendKeys("221@02.com");
 		
 		WebElement create = driver.findElement(By.id("SubmitCreate"));
 		create.click();
